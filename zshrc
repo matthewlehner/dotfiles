@@ -1,9 +1,15 @@
+# SCM Breeze
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+
+# DO NOT EDIT BELOW THIS LINE
+
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
 
 # completion
 autoload -U compinit
 compinit
+setopt no_complete_aliases
 
 # automatically enter directories without cd
 setopt auto_cd
