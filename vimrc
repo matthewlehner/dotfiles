@@ -19,8 +19,6 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-filetype plugin indent on
-
 set tabstop=2 shiftwidth=2 " a tab is two spaces
 set softtabstop=2
 set expandtab              " use spaces, not tabs
