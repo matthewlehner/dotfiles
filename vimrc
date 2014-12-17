@@ -19,6 +19,35 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
+augroup vimrcEx
+  autocmd!
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it for commit messages, when the position is invalid, or when
+  " inside an event handler (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
+  " Set syntax highlighting for specific file types
+  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+  " Enable spell checking for Markdown
+  autocmd BufRead,BufNewFile *.md setlocal spell
+
+  " Automatically wrap at 80 characters for Markdown
+  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+  " Automatically wrap at 72 characters and spell check git commit messages
+  autocmd FileType gitcommit setlocal textwidth=72
+  autocmd FileType gitcommit setlocal spell
+
+  " Allow stylesheets to autocomplete hyphenated words
+  autocmd FileType css,scss,sass setlocal iskeyword+=-
+augroup END
+
 set tabstop=2 shiftwidth=2 " a tab is two spaces
 set softtabstop=2
 set expandtab              " use spaces, not tabs
@@ -44,10 +73,10 @@ syntax enable
 set background=dark
 if !has('gui_running')
   let g:solarized_termcolors=256
-  let g:solarized_visibility="high"
+  " let g:solarized_visibility="high"
 endif
 colorscheme solarized
-" highlight NonText guibg=#060606
+highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 " Make it obvious where 80 characters is
