@@ -74,6 +74,7 @@ set background=dark
 if !has('gui_running')
   let g:solarized_termcolors=256
   " let g:solarized_visibility="high"
+  set guifont=DejaVu\ Sans\ Mono:h12
 endif
 colorscheme solarized
 highlight NonText guibg=#060606
@@ -114,5 +115,13 @@ noremap <C-h> <C-w>h
 noremap <C-l> <C-w>l
 
 set backspace=indent,eol,start
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+let g:rspec_command = "spring rspec {spec}"
 
 let g:syntastic_check_on_open=1
