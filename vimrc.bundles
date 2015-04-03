@@ -21,6 +21,7 @@ Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
 Plugin 'xenoterracide/html.vim'
 Plugin 'ap/vim-css-color'
+Plugin 'wookiehangover/jshint.vim'
 
 " Necessary stuff
 Plugin 'scrooloose/syntastic'
