@@ -37,9 +37,11 @@ Plugin 'vim-scripts/tComment'
 Plugin 'danro/rename.vim'
 Plugin 'bling/vim-airline'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'rking/ag.vim'
 
 " Rails
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-rails'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
