@@ -17,6 +17,6 @@
 	autocrlf = input
 [user]
 	name = Matthew Lehner
-	email = matthewlehner@gmail.com
+	email = matthew@mpl.io
 [credential]
 	helper = osxkeychain
