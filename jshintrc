@@ -1,18 +1,18 @@
 {
-  asi: false,
-  bitwise: true,
-  browser: true,
-  camelcase: true,
-  curly: true,
-  forin: true,
-  immed: true,
-  latedef: "nofunc",
-  maxlen: 80,
-  newcap: true,
-  noarg: true,
-  noempty: true,
-  nonew: true,
-  predef: [
+  "asi": false,
+  "bitwise": true,
+  "browser": true,
+  "camelcase": true,
+  "curly": true,
+  "esnext":true,
+  "forin": true,
+  "immed": true,
+  "latedef": "nofunc",
+  "maxlen": 120,
+  "noarg": true,
+  "noempty": true,
+  "nonew": true,
+  "predef": [
     "$",
     "jQuery",
     "jasmine",
@@ -24,8 +24,8 @@
     "inject",
     "module"
   ],
-  quotmark: true,
-  trailing: true,
-  undef: true,
-  unused: true
+  "quotmark": true,
+  "trailing": true,
+  "undef": true,
+  "unused": true
 }
