@@ -11,7 +11,7 @@ function heroku_pg_pull(){
   read "local_database_name?> "
   echo
   if [[ "$local_database_name" == "$2" ]]; then
-    curl -o heroku_pg_pull_latest_backup.dump `heroku pgbackups:url -a $1`;
+    curl -o heroku_pg_pull_latest_backup.dump `heroku pg:backups public-url -a $1 | cat`;
     pg_restore --verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $2 heroku_pg_pull_latest_backup.dump;
     rm heroku_pg_pull_latest_backup.dump;
   else
