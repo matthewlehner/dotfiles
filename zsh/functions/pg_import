@@ -1,0 +1,17 @@
+# shortcut to import db dumps to postgres with all the good options.
+#
+# Usage:
+#
+# $ pg_import [database name] [db dump filename]
+#
+#
+function pg_import() {
+  if [ "$#" -ne 2 ]; then
+    echo "Usage:"
+    echo
+    echo "$ pg_import [database name] [db dump filename]"
+  else
+    pg_restore --verbose --clean --no-acl --no-owner -h localhost -U `whoami` \
+      -d $1 $2;
+  fi
+}
