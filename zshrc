@@ -44,3 +44,4 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 [ -s "/Users/matthew/.scm_breeze/scm_breeze.sh" ] && source "/Users/matthew/.scm_breeze/scm_breeze.sh"
 
 [ -s "/Users/matthew/.iterm2_shell_integration" ] && source /Users/matthew/.iterm2_shell_integration.zsh
+[ -s "/usr/local/share/zsh/site-functions" ] && source /usr/local/share/zsh/site-functions
