@@ -39,9 +39,15 @@ export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$PATH"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
+# nvm
+export NVM_DIR=~/.nvm
+source /usr/local/opt/nvm/nvm.sh
+
 [ -s "~/Users/matthew/.secrets" ] && source "/Users/matthew/.secrets"
 
+# SCM Breeze
 [ -s "/Users/matthew/.scm_breeze/scm_breeze.sh" ] && source "/Users/matthew/.scm_breeze/scm_breeze.sh"
+
 
 [ -s "/Users/matthew/.iterm2_shell_integration" ] && source /Users/matthew/.iterm2_shell_integration.zsh
 [ -s "/usr/local/share/zsh/site-functions" ] && source /usr/local/share/zsh/site-functions
