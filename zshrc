@@ -40,8 +40,10 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # nvm
-export NVM_DIR=~/.nvm
-source /usr/local/opt/nvm/nvm.sh
+if [ -s "/usr/local/opt/nvm/nvm.sh" ] ; then
+  export NVM_DIR=~/.nvm
+  source /usr/local/opt/nvm/nvm.sh
+fi
 
 [ -s "~/Users/matthew/.secrets" ] && source "/Users/matthew/.secrets"
 
