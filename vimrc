@@ -33,7 +33,7 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
-  autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+  autocmd BufRead,BufNewFile *.es6 set filetype=javascript
 
   " Enable spell checking for Markdown
   autocmd BufRead,BufNewFile *.md setlocal spell
@@ -133,9 +133,12 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:sytastic_javascript_checkers = ["eslint"]
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ["eslint"]
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
 let g:syntastic_ruby_checkers = ["rubocop", "mri"]
