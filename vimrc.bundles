@@ -24,6 +24,7 @@ Plugin 'mxw/vim-jsx'
 
 " Necessary stuff
 Plugin 'scrooloose/syntastic'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'kien/ctrlp.vim'
