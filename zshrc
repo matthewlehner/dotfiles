@@ -49,8 +49,11 @@ fi
 
 [ -s "~/Users/matthew/.secrets" ] && source "/Users/matthew/.secrets"
 
-# SCM Breeze
+# SCM Shortcuts
 [ -s "/Users/matthew/.scm_breeze/scm_breeze.sh" ] && source "/Users/matthew/.scm_breeze/scm_breeze.sh"
+if ! type "scmpuff" > /dev/null; then
+  eval "$(scmpuff init -s)"
+fi
 
 
 [ -s "/Users/matthew/.iterm2_shell_integration" ] && source /Users/matthew/.iterm2_shell_integration.zsh
