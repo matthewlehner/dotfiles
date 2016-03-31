@@ -36,8 +36,10 @@ export CLICOLOR=1
 export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 # chruby and ruby auto-switcher
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+if [ -s "/usr/local/opt/chruby/share/chruby/chruby.sh" ] ; then
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+  source /usr/local/opt/chruby/share/chruby/auto.sh
+fi
 
 # nvm
 if [ -s "/usr/local/opt/nvm/nvm.sh" ] ; then
