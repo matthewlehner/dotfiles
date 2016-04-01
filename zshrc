@@ -51,9 +51,7 @@ fi
 
 # SCM Shortcuts
 [ -s "/Users/matthew/.scm_breeze/scm_breeze.sh" ] && source "/Users/matthew/.scm_breeze/scm_breeze.sh"
-if ! type "scmpuff" > /dev/null; then
-  eval "$(scmpuff init -s)"
-fi
+eval "$(scmpuff init -s)"
 
 
 [ -s "/Users/matthew/.iterm2_shell_integration" ] && source /Users/matthew/.iterm2_shell_integration.zsh
