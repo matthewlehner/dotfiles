@@ -50,8 +50,16 @@ export GIT_REPO_DIR="$HOME/code"
 #     $ git_index
 #     # => cd $GIT_REPO_DIR
 
+# Detect shell
 
 function git_index() {
+  if [ -n "${ZSH_VERSION:-}" ]
+  then
+    local shell="zsh"
+  else
+    local shell="bash"
+  fi
+
   IFS=$'\n'
   if [ -z "$1" ]; then
     # Just change to $GIT_REPO_DIR if no params given.
