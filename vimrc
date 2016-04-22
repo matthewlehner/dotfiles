@@ -89,6 +89,7 @@ set colorcolumn=+1
 " Numbers
 set number
 set numberwidth=5
+set relativenumber
 
 " Tab completion
 " will inset tab at beginning of line,
@@ -145,3 +146,11 @@ let g:syntastic_javascript_checkers = ["eslint"]
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 let g:syntastic_ruby_checkers = ["rubocop", "mri"]
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"

@@ -28,7 +28,6 @@ Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'kien/ctrlp.vim'
-Plugin 'myusuf3/numbers.vim'
 Plugin 'tpope/vim-fugitive'
 
 " Useful stuff
@@ -43,6 +42,9 @@ Plugin 'jgdavey/tslime.vim'
 " Rails
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-rails'
+
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
