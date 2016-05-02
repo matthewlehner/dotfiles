@@ -27,7 +27,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 
 " Useful stuff
