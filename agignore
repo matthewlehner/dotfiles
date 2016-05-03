@@ -1,3 +1,9 @@
 log
 tags
 tmp
+vendor
+.git/
+bower_components/
+node_modules/
+bundle/cache/
+_build/
