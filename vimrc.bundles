@@ -40,7 +40,6 @@ Plugin 'rking/ag.vim'
 Plugin 'jgdavey/tslime.vim'
 
 " Rails
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-rails'
 
 Plugin 'SirVer/ultisnips'
