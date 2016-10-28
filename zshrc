@@ -42,17 +42,15 @@ if [ -s "/usr/local/opt/chruby/share/chruby/chruby.sh" ] ; then
 fi
 
 # nvm
-if [ -s "/usr/local/opt/nvm/nvm.sh" ] ; then
-  export NVM_DIR=~/.nvm
-  source /usr/local/opt/nvm/nvm.sh
+if [ -s "$HOME/.nvm/nvm.sh" ] ; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 fi
 
 [ -s "~/Users/matthew/.secrets" ] && source "/Users/matthew/.secrets"
 
 # SCM Shortcuts
-[ -s "/Users/matthew/.scm_breeze/scm_breeze.sh" ] && source "/Users/matthew/.scm_breeze/scm_breeze.sh"
 eval "$(scmpuff init -s)"
-
 
 [ -s "/Users/matthew/.iterm2_shell_integration" ] && source /Users/matthew/.iterm2_shell_integration.zsh
 [ -s "/usr/local/share/zsh/site-functions" ] && source /usr/local/share/zsh/site-functions
