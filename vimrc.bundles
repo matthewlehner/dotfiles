@@ -14,21 +14,18 @@ Plugin 'altercation/vim-colors-solarized'
 " Syntax Highlighting
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'juvenn/mustache.vim'
-Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
 Plugin 'xenoterracide/html.vim'
 Plugin 'ap/vim-css-color'
 Plugin 'mxw/vim-jsx'
 
 " Necessary stuff
-Plugin 'scrooloose/syntastic'
-Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'neomake/neomake'
 
 " Useful stuff
 Plugin 'vim-scripts/matchit.zip'
@@ -42,8 +39,8 @@ Plugin 'jgdavey/tslime.vim'
 " Rails
 Plugin 'tpope/vim-rails'
 
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+" Elixir
+Plugin 'slashmili/alchemist.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

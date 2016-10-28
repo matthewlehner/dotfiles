@@ -118,29 +118,26 @@ noremap <C-l> <C-w>l
 
 set backspace=indent,eol,start
 
-let g:tslime_always_current_session = 1
-let g:tslime_always_current_window = 1
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-let g:syntastic_javascript_checkers = ["eslint"]
-
-let g:syntastic_ruby_checkers = ["rubocop", "mri"]
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsExpandTrigger='<tab>'
+" let g:UltiSnipsJumpForwardTrigger='<c-b>'
+" let g:UltiSnipsJumpBackwardTrigger='<c-z>'
 
 " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" let g:UltiSnipsEditSplit="vertical"
+
+" Run NeoMake on read and write operations
+autocmd! BufReadPost,BufWritePost * Neomake
+
+let g:neomake_elixir_enabled_makers = ['elixir', 'credo', 'dogma']
+" let g:neomake_serialize = 1
+" let g:neomake_serialize_abort_on_error = 1
+" let g:neomake_open_list = 2
+" let g:neomake_list_height = 4
+" let g:neomake_verbose = 2
+" let g:neomake_error_sign = { 'text': '✗', 'texthl': 'ErrorMsg' }
+" let g:neomake_warning_sign = { 'text': '⚠', 'texthl': 'WarningMsg' }
