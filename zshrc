@@ -52,5 +52,7 @@ fi
 # SCM Shortcuts
 eval "$(scmpuff init -s)"
 
+eval "$(direnv hook zsh)"
+
 [ -s "/Users/matthew/.iterm2_shell_integration" ] && source /Users/matthew/.iterm2_shell_integration.zsh
 [ -s "/usr/local/share/zsh/site-functions" ] && source /usr/local/share/zsh/site-functions
