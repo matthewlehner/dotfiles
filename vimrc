@@ -105,8 +105,6 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
-let g:html_indent_tags = 'li\|p'
-
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 
@@ -117,6 +115,9 @@ noremap <C-h> <C-w>h
 noremap <C-l> <C-w>l
 
 set backspace=indent,eol,start
+
+let g:html_indent_tags = 'li\|p'
+let g:airline_powerline_fonts = 1
 
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
