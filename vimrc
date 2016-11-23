@@ -120,6 +120,7 @@ set backspace=indent,eol,start
 
 let g:html_indent_tags = 'li\|p'
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'solarized'
 
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
