@@ -12,13 +12,8 @@ Plugin 'croaky/vim-colors-github'
 Plugin 'altercation/vim-colors-solarized'
 
 " Syntax Highlighting
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'pangloss/vim-javascript'
-Plugin 'juvenn/mustache.vim'
-Plugin 'tpope/vim-markdown'
-Plugin 'xenoterracide/html.vim'
+Plugin 'sherun/vim-polyglot'
 Plugin 'ap/vim-css-color'
-Plugin 'mxw/vim-jsx'
 
 " Necessary stuff
 Plugin 'tpope/vim-surround'
@@ -33,7 +28,6 @@ Plugin 'vim-scripts/tComment'
 Plugin 'danro/rename.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'rking/ag.vim'
 Plugin 'jgdavey/tslime.vim'
 
