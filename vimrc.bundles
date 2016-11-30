@@ -12,7 +12,7 @@ Plugin 'croaky/vim-colors-github'
 Plugin 'altercation/vim-colors-solarized'
 
 " Syntax Highlighting
-Plugin 'sherun/vim-polyglot'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'ap/vim-css-color'
 
 " Necessary stuff
@@ -21,6 +21,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'neomake/neomake'
+Plugin 'jaawerth/neomake-local-eslint-first'
 
 " Useful stuff
 Plugin 'vim-scripts/matchit.zip'
