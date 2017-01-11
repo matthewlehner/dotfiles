@@ -1,0 +1,10 @@
+pg_save() {
+  if [ "$#" -ne 2 ]
+  then
+    echo "Usage:"
+    echo
+    echo "$ pg_save [database name] [filename]"
+  else
+    pg_dump -Fc --no-acl --no-owner -h localhost -U `whoami` $1 > $2.dump
+  fi
+}

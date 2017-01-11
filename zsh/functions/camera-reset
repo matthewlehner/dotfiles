@@ -1,0 +1,4 @@
+camera_reset() {
+  sudo killall VDCAssistant
+  sudo killall AppleCameraAssistant
+}
