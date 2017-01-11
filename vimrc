@@ -122,10 +122,6 @@ let g:html_indent_tags = 'li\|p'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
 
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 " let g:UltiSnipsExpandTrigger='<tab>'
 " let g:UltiSnipsJumpForwardTrigger='<c-b>'
@@ -137,11 +133,6 @@ let g:airline_theme = 'solarized'
 " Run NeoMake on read and write operations
 autocmd! BufReadPost,BufWritePost * Neomake
 
-let g:neomake_elixir_enabled_makers = ['elixir', 'credo', 'dogma']
-" let g:neomake_serialize = 1
-" let g:neomake_serialize_abort_on_error = 1
-" let g:neomake_open_list = 2
-" let g:neomake_list_height = 4
-" let g:neomake_verbose = 2
-" let g:neomake_error_sign = { 'text': '✗', 'texthl': 'ErrorMsg' }
-" let g:neomake_warning_sign = { 'text': '⚠', 'texthl': 'WarningMsg' }
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_jsx_enabled_makers = ['eslint']
+let g:neomake_elixir_enabled_makers = ['elixir', 'credo']
