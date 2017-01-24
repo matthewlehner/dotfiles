@@ -15,6 +15,7 @@
 [core]
   excludesfile = ~/.gitignore
 	autocrlf = input
+	attributesfile = /Users/matthew/.gitattributes
 [user]
 	name = Matthew Lehner
 	email = matthew@mpl.io
