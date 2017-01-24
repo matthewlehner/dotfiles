@@ -135,4 +135,4 @@ autocmd! BufReadPost,BufWritePost * Neomake
 
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
-let g:neomake_elixir_enabled_makers = ['elixir', 'credo']
+let g:neomake_elixir_enabled_makers = ['mix', 'credo']
