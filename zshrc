@@ -41,12 +41,6 @@ if [ -s "/usr/local/opt/chruby/share/chruby/chruby.sh" ] ; then
   source /usr/local/opt/chruby/share/chruby/auto.sh
 fi
 
-# nvm
-if [ -s "$HOME/.nvm/nvm.sh" ] ; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-fi
-
 [ -s "~/Users/matthew/.secrets" ] && source "/Users/matthew/.secrets"
 
 # SCM Shortcuts
