@@ -122,13 +122,10 @@ let g:html_indent_tags = 'li\|p'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-" let g:UltiSnipsExpandTrigger='<tab>'
-" let g:UltiSnipsJumpForwardTrigger='<c-b>'
-" let g:UltiSnipsJumpBackwardTrigger='<c-z>'
-
-" If you want :UltiSnipsEdit to split your window.
-" let g:UltiSnipsEditSplit="vertical"
+" vim-test config.
+let test#strategy = "tslime"
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
 
 " Run NeoMake on read and write operations
 autocmd! BufReadPost,BufWritePost * Neomake
