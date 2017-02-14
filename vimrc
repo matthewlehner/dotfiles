@@ -71,6 +71,7 @@ if executable('rg')
   let g:ctrlp_use_caching = 0
 endif
 
+filetype plugin indent on     " required
 " Set colour scheme and turn on syntax highlighting
 syntax enable
 set background=dark

@@ -1,53 +1,58 @@
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-" if empty(glob("~/.vim/autoload/plug.vim"))
-"     " Ensure all needed directories exist  (Thanks @kapadiamush)
-"     execute 'mkdir -p ~/.vim/plugged'
-"     execute 'mkdir -p ~/.vim/autoload'
-"     " Download the actual plugin manager
-"     execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
-" endif
-"
-" call plug#begin('~/.vim/plugged')
+
+" Install vim-plug if we don't already have it.
+if empty(glob("~/.vim/autoload/plug.vim"))
+  " Ensure all needed directories exist  (Thanks @kapadiamush)
+  silent !mkdir -p ~/.vim/plugged > /dev/null 2>&1
+  silent !mkdir -p ~/.vim/autoload > /dev/null 2>&1
+  " Download the actual plugin manager
+  execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
+
+" Initialize vim-plug
+call plug#begin('~/.vim/plugged')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" Plugin 'gmarik/Vundle.vim'
 
 " Colour Schemes
-Plugin 'croaky/vim-colors-github'
-Plugin 'altercation/vim-colors-solarized'
+Plug 'croaky/vim-colors-github'
+Plug 'altercation/vim-colors-solarized'
 
 " Syntax Highlighting
-Plugin 'sheerun/vim-polyglot'
-Plugin 'ap/vim-css-color'
+Plug 'sheerun/vim-polyglot'
+Plug 'ap/vim-css-color'
 
 " Necessary stuff
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'neomake/neomake'
-Plugin 'jaawerth/neomake-local-eslint-first'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'neomake/neomake'
+Plug 'jaawerth/neomake-local-eslint-first'
 
 " Useful stuff
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/tComment'
-Plugin 'danro/rename.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'rking/ag.vim'
-Plugin 'jgdavey/tslime.vim'
-Plugin 'janko-m/vim-test'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/tComment'
+Plug 'danro/rename.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'rking/ag.vim'
+Plug 'jgdavey/tslime.vim'
+Plug 'janko-m/vim-test'
 
 " Rails
-Plugin 'tpope/vim-rails'
+Plug 'tpope/vim-rails'
 
 " Elixir
-Plugin 'slashmili/alchemist.vim'
+Plug 'slashmili/alchemist.vim'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+" call vundle#end()             " required
+" filetype plugin indent on     " required
+
+call plug#end()               " required
