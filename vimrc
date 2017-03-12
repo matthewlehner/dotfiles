@@ -1,26 +1,55 @@
 set nocompatible
-
-" Leader
-let mapleader=" "
-
-set backspace=2     " Backspace deletes like most programs in insert mode
-set nobackup
-set nowritebackup
-set noswapfile
-set history=50
-set ruler           " show cursor position at all times
-set showcmd
-set incsearch       " do incremental searching
-set laststatus=2
-set cursorline
-set autowrite
+set encoding=utf-8
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
+" Leader
+let mapleader=","
+
+set updatecount=0   " Disable swap files. Systems don't crash much these days.
+set history=200     " Remember more Ex commands
+set showcmd         " show partial commands below the status line
+set ruler           " show cursor position at all times
+set cursorline      " highlight the line of the cursor
+set autoread        " Auto-reload buffers when file changed on disk
+set scrolloff=3     " have some context around current line always on screen
+
+"" Searching
+set hlsearch   " highlight matches
+set incsearch  " do incremental searching
+set ignorecase " searches are case insensitive
+set smartcase  " unless they contain at least one capital letter
+" clear search buffer when hitting return
+:nnoremap <CR> :nohlsearch<cr>
+set gdefault   " have :s///g flag on by default
+
+"" Whitespace
+set tabstop=2 shiftwidth=2 " a tab is two spaces
+" set softtabstop=2
+set expandtab              " use spaces, not tabs
+set list
+set backspace=indent,eol,start " backspace through everything in insert mode
+set formatoptions+=j " Delete comment char when joining commented lines
+set nojoinspaces     " Use only one space after "." when joining lines, not 2
+" display extra whitespace
+" set list listchars=tab:»·,trail:·
+set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
+set showbreak=↪\
+
+" Time out on key codes but not on mappings.
+set notimeout
+set ttimeout
+set ttimeoutlen=100
+
 augroup vimrcEx
+  " Clear all autocmds in the group
   autocmd!
+
+  " Avoid showing trailing whitespace when in insert mode
+  au InsertEnter * :set listchars-=trail:•
+  au InsertLeave * :set listchars+=trail:•
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it for commit messages, when the position is invalid, or when
@@ -32,7 +61,7 @@ augroup vimrcEx
 
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufRead,BufNewFile *.{md,markdown,mdown,txt} setf markdown
   autocmd BufRead,BufNewFile *.es6 set filetype=javascript
 
   " Enable spell checking for Markdown
@@ -49,13 +78,6 @@ augroup vimrcEx
   " Allow stylesheets to autocomplete hyphenated words
   autocmd FileType css,scss,sass setlocal iskeyword+=-
 augroup END
-
-set tabstop=2 shiftwidth=2 " a tab is two spaces
-set softtabstop=2
-set expandtab              " use spaces, not tabs
-
-" display extra whitespace
-set list listchars=tab:»·,trail:·
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('rg')
@@ -75,14 +97,19 @@ filetype plugin indent on     " required
 " Set colour scheme and turn on syntax highlighting
 syntax enable
 set background=dark
-if !has('gui_running')
-  let g:solarized_termcolors=256
-  " let g:solarized_visibility="high"
-  set guifont=DejaVu\ Sans\ Mono:h12
+
+if has('termguicolors')
+  " set Vim-specific sequences for RGB colors
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+
+  colorscheme solarized8_dark_high
+  let g:airline_theme = 'solarized'
+else
+  colorscheme solarized8
+  let g:airline_theme = 'solarized'
 endif
-colorscheme solarized
-highlight NonText guibg=#060606
-highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 " Make it obvious where 80 characters is
 set textwidth=80
@@ -117,11 +144,12 @@ noremap <C-k> <C-w>k
 noremap <C-h> <C-w>h
 noremap <C-l> <C-w>l
 
-set backspace=indent,eol,start
-
 let g:html_indent_tags = 'li\|p'
+
+"" Status line
+set laststatus=2    " Always show statusline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'solarized'
+let g:airline#extensions#tabline#enabled = 1
 
 " vim-test config.
 let test#strategy = "tslime"
@@ -135,4 +163,5 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
 let g:neomake_elixir_enabled_makers = ['mix', 'credo']
 
+" Clear tslime variables
 nmap <C-c>r <Plug>SetTmuxVars
