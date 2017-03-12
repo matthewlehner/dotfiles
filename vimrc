@@ -111,13 +111,16 @@ else
   let g:airline_theme = 'solarized'
 endif
 
+" Comments are in italicized font
+highlight Comment cterm=italic
+
 " Make it obvious where 80 characters is
-set textwidth=80
+set textwidth=79
 set colorcolumn=+1
 
 " Numbers
 set number
-set numberwidth=5
+set numberwidth=4
 set relativenumber
 
 " Tab completion
