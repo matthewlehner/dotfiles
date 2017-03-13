@@ -1,5 +1,4 @@
 # modify the prompt to contain git branch name if applicable
-
 setopt promptsubst
 
 setopt hist_ignore_all_dups inc_append_history appendhistory
@@ -18,8 +17,7 @@ bindkey -v
 autoload -Uz compinit
 compinit
 
-PURE_GIT_PULL=0
-PURE_GIT_UNTRACKED_DIRTY=0
+fpath=( "$HOME/.zsh/site-functions" $fpath )
 
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
@@ -27,11 +25,13 @@ for function in ~/.zsh/functions/*; do
 done
 
 # makes color constants available
-autoload -U colors
-colors
+autoload -U colors; colors
 
 # enable coloured output from ls, etc
 export CLICOLOR=1
+
+autoload -U promptinit; promptinit
+prompt pure
 
 export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
