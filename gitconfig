@@ -19,5 +19,14 @@
 [user]
 	name = Matthew Lehner
 	email = matthew@mpl.io
+	signingkey = 949ECEB71E9B1AE0
 [credential]
 	helper = osxkeychain
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[gpg]
+	program = /usr/local/bin/gpg2
