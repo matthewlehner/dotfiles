@@ -104,8 +104,8 @@ if has('termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 
-  colorscheme solarized8_dark_high
-  let g:airline_theme = 'solarized'
+  colorscheme tender
+  let g:airline_theme = 'tender'
 else
   colorscheme solarized8
   let g:airline_theme = 'solarized'

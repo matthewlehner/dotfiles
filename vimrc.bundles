@@ -22,6 +22,8 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'fneu/breezy'
 Plug 'lifepillar/vim-solarized8'
 Plug 'chriskempson/base16-vim'
+Plug 'jacoborus/tender.vim'
+Plug 'lifepillar/vim-wwdc16-theme'
 
 " Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
