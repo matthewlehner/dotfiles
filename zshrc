@@ -33,7 +33,7 @@ export CLICOLOR=1
 autoload -U promptinit; promptinit
 prompt pure
 
-export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # chruby and ruby auto-switcher
 if [ -s "/usr/local/opt/chruby/share/chruby/chruby.sh" ] ; then
