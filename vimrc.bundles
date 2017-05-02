@@ -17,7 +17,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Colour Schemes
-Plug 'croaky/vim-colors-github'
+Plug 'rakr/vim-one'
 Plug 'ayu-theme/ayu-vim'
 Plug 'fneu/breezy'
 Plug 'lifepillar/vim-solarized8'
@@ -27,7 +27,7 @@ Plug 'lifepillar/vim-wwdc16-theme'
 Plug 'YorickPeterse/happy_hacking.vim'
 
 " Syntax Highlighting
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot', { 'do': './build' }
 Plug 'ap/vim-css-color'
 
 " Necessary stuff
@@ -43,7 +43,6 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/tComment'
 Plug 'danro/rename.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'rking/ag.vim'
 Plug 'jgdavey/tslime.vim'
 Plug 'janko-m/vim-test'

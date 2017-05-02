@@ -104,8 +104,9 @@ if has('termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 
-  colorscheme tender
-  let g:airline_theme = 'tender'
+  let g:airline_theme = 'one'
+  let g:one_allow_italics = 1
+  colorscheme one
 else
   colorscheme solarized8
   let g:airline_theme = 'solarized'
@@ -162,9 +163,10 @@ nmap <silent> <leader>T :TestFile<CR>
 " Run NeoMake on read and write operations
 autocmd! BufReadPost,BufWritePost * Neomake
 
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_javascript_jsx_enabled_makers = ['eslint', 'flow']
+let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
 let g:neomake_elixir_enabled_makers = ['mix', 'credo']
 
 " Clear tslime variables
 nmap <C-c>r <Plug>SetTmuxVars
+
+let g:javascript_plugin_flow = 1
