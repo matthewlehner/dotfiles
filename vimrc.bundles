@@ -52,5 +52,8 @@ Plug 'tpope/vim-rails'
 
 " Elixir
 Plug 'slashmili/alchemist.vim'
+"
+" Testing out
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
 call plug#end()               " required

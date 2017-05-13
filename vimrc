@@ -124,21 +124,6 @@ set number
 set numberwidth=4
 set relativenumber
 
-" Tab completion
-" will inset tab at beginning of line,
-" will use completion if not at beginning
-set wildmode=list:longest,list:full
-function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
-endfunction
-inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <S-Tab> <c-n>
-
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 
@@ -170,3 +155,4 @@ let g:neomake_elixir_enabled_makers = ['mix', 'credo']
 nmap <C-c>r <Plug>SetTmuxVars
 
 let g:javascript_plugin_flow = 1
+let g:alchemist#elixir_erlang_src = "/Users/matthew/code"
