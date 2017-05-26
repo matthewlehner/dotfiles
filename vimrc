@@ -62,7 +62,11 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.{md,markdown,mdown,txt} setf markdown
+
+  autocmd FileType javascript setlocal formatprg=prettier\ --stdin\ --parser\ flow
+  let g:neoformat_try_formatprg = 1
   autocmd BufRead,BufNewFile *.es6 set filetype=javascript
+  autocmd BufWritePre *.jsx Neoformat
 
   " Enable spell checking for Markdown
   autocmd BufRead,BufNewFile *.md setlocal spell

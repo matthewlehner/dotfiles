@@ -56,4 +56,7 @@ Plug 'slashmili/alchemist.vim'
 " Testing out
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
+" Trying
+Plug 'sbdchd/neoformat'
+
 call plug#end()               " required
