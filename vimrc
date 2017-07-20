@@ -63,10 +63,13 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.{md,markdown,mdown,txt} setf markdown
 
-  autocmd FileType javascript setlocal formatprg=prettier\ --stdin\ --parser\ flow
   let g:neoformat_try_formatprg = 1
   autocmd BufRead,BufNewFile *.es6 set filetype=javascript
-  autocmd BufWritePre *.jsx Neoformat
+  autocmd FileType javascript setlocal formatprg=prettier\ --stdin\ --parser\ flow
+  autocmd BufWritePre *.{js,jsx} Neoformat
+
+  autocmd FileType graphql setlocal formatprg=prettier\ --stdin\ --parser\ graphql
+  autocmd BufWritePre *.{graphql,gql} Neoformat
 
   " Enable spell checking for Markdown
   autocmd BufRead,BufNewFile *.md setlocal spell

@@ -51,6 +51,7 @@ Plug 'janko-m/vim-test'
 Plug 'tpope/vim-rails'
 
 " Elixir
+Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 "
 " Testing out
