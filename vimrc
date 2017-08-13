@@ -65,7 +65,7 @@ augroup vimrcEx
 
   let g:neoformat_try_formatprg = 1
   autocmd BufRead,BufNewFile *.es6 set filetype=javascript
-  autocmd FileType javascript setlocal formatprg=prettier\ --stdin\ --parser\ flow
+  autocmd FileType javascript setlocal formatprg=prettier\ --stdin\ --parser\ babylon
   autocmd BufWritePre *.{js,jsx} Neoformat
 
   autocmd FileType graphql setlocal formatprg=prettier\ --stdin\ --parser\ graphql
