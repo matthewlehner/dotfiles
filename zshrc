@@ -30,6 +30,9 @@ autoload -U colors; colors
 # enable coloured output from ls, etc
 export CLICOLOR=1
 
+# Allow shell history in IEx/Erlang
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 autoload -U promptinit; promptinit
 prompt pure
 
