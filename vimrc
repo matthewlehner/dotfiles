@@ -111,13 +111,11 @@ if has('termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   set termguicolors
 
-  let g:airline_theme = 'one'
   let g:one_allow_italics = 1
-  colorscheme one
-else
-  colorscheme solarized8
-  let g:airline_theme = 'solarized'
 endif
+
+let g:airline_theme = 'one'
+colorscheme one
 
 " Comments are in italicized font
 highlight Comment cterm=italic
