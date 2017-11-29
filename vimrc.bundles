@@ -21,10 +21,9 @@ Plug 'rakr/vim-one'
 Plug 'ayu-theme/ayu-vim'
 Plug 'fneu/breezy'
 Plug 'lifepillar/vim-solarized8'
-Plug 'chriskempson/base16-vim'
 Plug 'jacoborus/tender.vim'
-Plug 'lifepillar/vim-wwdc16-theme'
-Plug 'YorickPeterse/happy_hacking.vim'
+" Plug 'lifepillar/vim-wwdc16-theme'
+" Plug 'YorickPeterse/happy_hacking.vim'
 
 " Syntax Highlighting
 Plug 'sheerun/vim-polyglot', { 'do': './build' }
@@ -55,9 +54,11 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 "
 " Testing out
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
 " Trying
 Plug 'sbdchd/neoformat'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 call plug#end()               " required
