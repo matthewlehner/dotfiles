@@ -36,7 +36,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 autoload -U promptinit; promptinit
 prompt pure
 
-export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.composer/vendor/bin:$PATH"
 
 # chruby and ruby auto-switcher
 if [ -s "/usr/local/opt/chruby/share/chruby/chruby.sh" ] ; then
