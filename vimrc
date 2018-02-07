@@ -86,7 +86,7 @@ augroup vimrcEx
   autocmd FileType css,scss,sass setlocal iskeyword+=-
 augroup END
 
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+" Use RipGrep https://github.com/BurntSushi/ripgrep
 if executable('rg')
   " Use ripgrep over Grep
   set grepprg=rg\ --vimgrep\ --no-heading
