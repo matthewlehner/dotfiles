@@ -34,8 +34,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'neomake/neomake'
-Plug 'jaawerth/neomake-local-eslint-first'
+Plug 'w0rp/ale'
 
 " Useful stuff
 Plug 'vim-scripts/matchit.zip'
@@ -57,7 +56,6 @@ Plug 'slashmili/alchemist.vim'
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
 " Trying
-Plug 'sbdchd/neoformat'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 

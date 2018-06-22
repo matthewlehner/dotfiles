@@ -63,13 +63,10 @@ augroup vimrcEx
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.{md,markdown,mdown,txt} setf markdown
 
-  let g:neoformat_try_formatprg = 1
   autocmd BufRead,BufNewFile *.es6 set filetype=javascript
   autocmd FileType javascript setlocal formatprg=prettier\ --stdin\ --parser\ babylon
-  autocmd BufWritePre *.{js,jsx} Neoformat
 
   autocmd FileType graphql setlocal formatprg=prettier\ --stdin\ --parser\ graphql
-  autocmd BufWritePre *.{graphql,gql} Neoformat
 
   " Enable spell checking for Markdown
   autocmd BufRead,BufNewFile *.md setlocal spell
@@ -151,13 +148,18 @@ nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 
 " Run NeoMake on read and write operations
-autocmd! BufReadPost,BufWritePost * Neomake
 
-let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
-let g:neomake_elixir_enabled_makers = ['mix', 'credo']
 
 " Clear tslime variables
 nmap <C-c>r <Plug>SetTmuxVars
 
 let g:javascript_plugin_flow = 1
 let g:alchemist#elixir_erlang_src = "/Users/matthew/code"
+
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['css'] = ['prettier']
+let g:ale_fixers['elixir'] = ['mix_format']
+let g:ale_fixers['elixir'] = ['mix_format']
+let g:ale_fixers['markdown'] = ['prettier']
