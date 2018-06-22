@@ -38,11 +38,15 @@ prompt pure
 
 export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.composer/vendor/bin:$PATH"
 
-# chruby and ruby auto-switcher
-if [ -s "/usr/local/opt/chruby/share/chruby/chruby.sh" ] ; then
-  source /usr/local/opt/chruby/share/chruby/chruby.sh
-  source /usr/local/opt/chruby/share/chruby/auto.sh
+if [ -s "/usr/local/opt/asdf/asdf.sh" ] ; then
+  source /usr/local/opt/asdf/asdf.sh
 fi
+
+# chruby and ruby auto-switcher
+# if [ -s "/usr/local/opt/chruby/share/chruby/chruby.sh" ] ; then
+#   source /usr/local/opt/chruby/share/chruby/chruby.sh
+#   source /usr/local/opt/chruby/share/chruby/auto.sh
+# fi
 
 [ -s "~/Users/matthew/.secrets" ] && source "/Users/matthew/.secrets"
 
