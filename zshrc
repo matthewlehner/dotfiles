@@ -39,6 +39,7 @@ prompt pure
 export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.composer/vendor/bin:$PATH"
 
 if [ -s "/usr/local/opt/asdf/asdf.sh" ] ; then
+  export KERL_CONFIG_OPTIONS="--without-javac"
   source /usr/local/opt/asdf/asdf.sh
 fi
 
