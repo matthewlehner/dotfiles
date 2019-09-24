@@ -30,3 +30,5 @@
 	required = true
 [gpg]
 	program = /usr/local/MacGPG2/bin/gpg2
+[rebase]
+	autosquash = true
