@@ -28,5 +28,6 @@ alias grb='git rebase'
 alias gb='git branch'
 alias grm='git rm'
 alias gcp='git cherry-pick'
+alias gcoma='git checkout origin/master'
 
 alias start='vim ~/Dropbox/Documents/Notes/day-start-checklist.md'
