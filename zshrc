@@ -44,7 +44,7 @@ export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.config/yarn/global
 
 if [ -s "/usr/local/opt/asdf/asdf.sh" ] ; then
   export KERL_CONFIG_OPTIONS="--without-javac"
-  source /usr/local/opt/asdf/asdf.sh
+  . /usr/local/opt/asdf/asdf.sh
 fi
 
 # chruby and ruby auto-switcher
