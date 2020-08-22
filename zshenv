@@ -30,4 +30,5 @@ alias grm='git rm'
 alias gcp='git cherry-pick'
 alias gcoma='git checkout origin/master'
 
+alias vim='nvim'
 alias start='vim ~/Dropbox/Documents/Notes/day-start-checklist.md'
