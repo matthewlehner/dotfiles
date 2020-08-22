@@ -14,8 +14,12 @@ setopt nomatch notify
 unsetopt beep
 bindkey -v
 
-autoload -Uz compinit
-compinit
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
 
 fpath=( "$HOME/.zsh/site-functions" $fpath )
 
