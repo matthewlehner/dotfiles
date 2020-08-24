@@ -1,0 +1,27 @@
+{
+  "coc.preferences.formatOnInsertLeave": true,
+  "coc.preferences.hoverTarget":"float",
+  "coc.preferences.currentFunctionSymbolAutoUpdate":true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "Markdown",
+    "elixir",
+    "eelixir",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "coc.preferences.formatOnType": true,
+  "diagnostic.refreshOnInsertMode":true,
+  "suggest.floatEnable":true,
+  "suggest.noselect":true,
+  "suggest.acceptSuggestionOnCommitCharacter":true,
+  "suggest.enablePreview":true,
+  "suggest.enablePreselect":true,
+  "diagnostic.maxWindowHeight": 20,
+  "signature.maxWindowHeight": 20,
+  "diagnostic.checkCurrentLine": true,
+  "html.format.enable": true
+}
