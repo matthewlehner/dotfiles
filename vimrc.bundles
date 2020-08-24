@@ -34,7 +34,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'w0rp/ale'
 
 " Useful stuff
 Plug 'vim-scripts/matchit.zip'
@@ -49,8 +48,6 @@ Plug 'janko-m/vim-test'
 Plug 'tpope/vim-rails'
 
 " Elixir
-Plug 'elixir-lang/vim-elixir'
-Plug 'slashmili/alchemist.vim'
 "
 " Testing out
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
@@ -58,5 +55,7 @@ Plug 'slashmili/alchemist.vim'
 " Trying
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()               " required
