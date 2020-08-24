@@ -218,4 +218,13 @@ nmap <silent> <leader>T :TestFile<CR>
 " Clear tslime variables
 nmap <C-c>r <Plug>SetTmuxVars
 
+" let g:javascript_plugin_flow = 1
+" let g:alchemist#elixir_erlang_src = "/Users/matthew/code"
 
+" let g:ale_fix_on_save = 1
+" let g:ale_fixers = {}
+" let g:ale_fixers['javascript'] = ['prettier']
+" let g:ale_fixers['css'] = ['prettier']
+" let g:ale_fixers['elixir'] = ['mix_format']
+" let g:ale_fixers['elixir'] = ['mix_format']
+" let g:ale_fixers['markdown'] = ['prettier']

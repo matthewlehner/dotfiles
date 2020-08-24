@@ -22,11 +22,9 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'fneu/breezy'
 Plug 'lifepillar/vim-solarized8'
 Plug 'jacoborus/tender.vim'
-" Plug 'lifepillar/vim-wwdc16-theme'
-" Plug 'YorickPeterse/happy_hacking.vim'
 
 " Syntax Highlighting
-Plug 'sheerun/vim-polyglot', { 'do': './build' }
+Plug 'sheerun/vim-polyglot', { 'do': './scripts/build' }
 Plug 'ap/vim-css-color'
 
 " Necessary stuff
@@ -34,6 +32,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+" Plug 'w0rp/ale'
 
 " Useful stuff
 Plug 'vim-scripts/matchit.zip'
@@ -47,15 +47,9 @@ Plug 'janko-m/vim-test'
 " Rails
 Plug 'tpope/vim-rails'
 
-" Elixir
-"
-" Testing out
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
-
 " Trying
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()               " required
