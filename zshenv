@@ -28,7 +28,9 @@ alias grb='git rebase'
 alias gb='git branch'
 alias grm='git rm'
 alias gcp='git cherry-pick'
-alias gcoma='git checkout origin/master'
+alias gcoma='git merge --ff-only origin/main'
 
 alias vim='nvim'
 alias start='vim ~/Dropbox/Documents/Notes/day-start-checklist.md'
+export ANDROID_SDK=/Users/matthew/Library/Android/sdk
+export PATH=/Users/matthew/Library/Android/sdk/platform-tools:$PATH

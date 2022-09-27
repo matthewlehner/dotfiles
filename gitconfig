@@ -30,3 +30,7 @@
 	required = true
 [rebase]
 	autosquash = true
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true

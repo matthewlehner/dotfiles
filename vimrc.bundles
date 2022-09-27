@@ -24,7 +24,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'jacoborus/tender.vim'
 
 " Syntax Highlighting
-Plug 'sheerun/vim-polyglot', { 'do': './scripts/build' }
+Plug 'sheerun/vim-polyglot', { 'do': 'git reset --hard && ./scripts/build' }
 Plug 'ap/vim-css-color'
 
 " Necessary stuff
@@ -33,19 +33,16 @@ Plug 'tpope/vim-repeat'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-" Plug 'w0rp/ale'
 
 " Useful stuff
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/tComment'
+Plug 'tpope/vim-endwise'
 Plug 'danro/rename.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'rking/ag.vim'
 Plug 'jgdavey/tslime.vim'
 Plug 'janko-m/vim-test'
-
-" Rails
-Plug 'tpope/vim-rails'
 
 " Trying
 Plug 'junegunn/goyo.vim'

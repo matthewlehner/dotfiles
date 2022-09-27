@@ -14,8 +14,11 @@ setopt nomatch notify
 unsetopt beep
 bindkey -v
 
+. $HOME/.asdf/asdf.sh
+
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+  FPATH=${ASDF_DIR}/completions:$FPATH
 
   autoload -Uz compinit
   compinit
@@ -42,16 +45,6 @@ prompt pure
 
 export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.composer/vendor/bin:$PATH"
 
-if [ -s "/usr/local/opt/asdf/asdf.sh" ] ; then
-  export KERL_CONFIG_OPTIONS="--without-javac"
-  . /usr/local/opt/asdf/asdf.sh
-fi
-
-# chruby and ruby auto-switcher
-# if [ -s "/usr/local/opt/chruby/share/chruby/chruby.sh" ] ; then
-#   source /usr/local/opt/chruby/share/chruby/chruby.sh
-#   source /usr/local/opt/chruby/share/chruby/auto.sh
-# fi
 
 [ -s "~/Users/matthew/.secrets" ] && source "/Users/matthew/.secrets"
 
@@ -60,3 +53,5 @@ eval "$(scmpuff init -s)"
 eval "$(direnv hook zsh)"
 [ -s "/Users/matthew/.iterm2_shell_integration" ] && source /Users/matthew/.iterm2_shell_integration.zsh
 [ -s "/usr/local/share/zsh/site-functions" ] && source /usr/local/share/zsh/site-functions
+
+autoload -U +X bashcompinit && bashcompinit

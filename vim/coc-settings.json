@@ -23,5 +23,7 @@
   "diagnostic.maxWindowHeight": 20,
   "signature.maxWindowHeight": 20,
   "diagnostic.checkCurrentLine": true,
-  "html.format.enable": true
+  "html.format.enable": true,
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
+  "tailwindCSS.headwind.runOnSave": false
 }

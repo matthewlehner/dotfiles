@@ -1,5 +1,6 @@
-elixir 1.10.4-otp-23
-erlang 23.0.3
-nodejs 12.18.3
+elixir 1.14.0-rc.0-otp-25
+erlang 25.0.3
+nodejs 18.7.0
 ruby 2.7.1
-yarn 1.22.4
+yarn 1.22.19
+python 3.8.5
